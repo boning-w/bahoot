@@ -11,8 +11,32 @@ A game-based learning platform like kahoot but opensource!
 - PostgreSQL
 - MongoDB
 - CI/CD with Github workflow
-- Devops
+- Docker (Devops)
+
+## Backend
+
+- Express
+- Prisma
+
+## Frontend
+
+- Nextjs
 
 ## Sofeware version
 
-- Node: v18.14.0
+- Node: v20.10.0
+
+## Day 1
+
+1. Install Next.js
+2. Install Express
+3. 
+
+```bash
+npx create-next-app@latest
+```
+
+```bash
+npm install express
+```
+

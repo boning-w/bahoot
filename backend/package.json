@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "0.0.0",
+  "description": "bahoot backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boning-w/bahoot.git"
+  },
+  "author": "boning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boning-w/bahoot/issues"
+  },
+  "homepage": "https://github.com/boning-w/bahoot#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
