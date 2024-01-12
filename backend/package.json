@@ -18,5 +18,9 @@
   "homepage": "https://github.com/boning-w/bahoot#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   }
 }
