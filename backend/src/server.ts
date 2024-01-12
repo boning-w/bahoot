@@ -1,6 +1,6 @@
-const express = require("express"),
-  swaggerJsdoc = require("swagger-jsdoc"),
-  swaggerUi = require("swagger-ui-express");
+import express, { Request, Response } from "express";
+import swaggerUi from "swagger-ui-express";
+import swaggerJsdoc from "swagger-jsdoc";
 
 const options = {
   failOnErrors: true, // Whether or not to throw when parsing errors. Defaults to false.
@@ -12,7 +12,7 @@ const options = {
       description: "Server that powers the Bahoot frontend",
     },
   },
-  apis: ["./src/*.js"], // files containing annotations as above
+  apis: ["./src/*.ts"], // files containing annotations as above
 };
 
 const app = express();
@@ -37,7 +37,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *           text/plain:
  *             example: Test!
  */
-app.get("/test", (req, res) => {
+app.get("/test", (_req: Request, res: Response) => {
   res.send("Test!");
 });
 
