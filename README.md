@@ -40,7 +40,9 @@ npx create-next-app@latest
 npm install express
 ```
 
-## Day 2
+3. Connect frontend and backend, i.e. frontend can make a request to backend and get a response successfully.
 
-- [x] Connect frontend and backend, i.e. frontend can make a request to backend and get a response successfully.
-- [ ] 
+4. Write a frontend unit test to test the `apiTest` api call.
+5. Write a e2e test to test the route `/test`
+6. 
+
