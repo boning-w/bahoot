@@ -1,3 +1,38 @@
+## JavaScript
+
+## CSS
+
+## Next.js
+
+## Best Practices
+
+### JavaScript
+
+### CSS
+
+### Next.js
+
+- [NextJS 13 folder structure best practice](https://stackoverflow.com/a/76506760/18697833)
+- [Project organization strategies](https://nextjs.org/docs/app/building-your-application/routing/colocation#project-organization-strategies)
+- [`src` Directory](https://nextjs.org/docs/app/building-your-application/routing/colocation#src-directory)
+  - If you're using Tailwind CSS, you'll need to add the `/src` prefix to the `tailwind.config.js` file in the [content section](https://tailwindcss.com/docs/content-configuration).
+
+- [Route Groups](https://nextjs.org/docs/app/building-your-application/routing/colocation#route-groups)
+
+- [Module Path Aliases](https://nextjs.org/docs/app/building-your-application/routing/colocation#module-path-aliases)
+
+## Network
+
+### HTTP Status
+
+- 500?
+
+### CORS
+
+Q. Why don't we encounter CORS issues when making requests with Next.js, while we face them when using React?
+
+
+
 ## Git
 
 - git status

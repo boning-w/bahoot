@@ -8,6 +8,7 @@ A game-based learning platform like kahoot but opensource!
 - JavaScript (TypeScript)
 - ReactJS (NextJS)
 - Express (Node.js)
+- Vitest
 - PostgreSQL
 - MongoDB
 - CI/CD with Github workflow
@@ -30,7 +31,6 @@ A game-based learning platform like kahoot but opensource!
 
 1. Install Next.js
 2. Install Express
-3. 
 
 ```bash
 npx create-next-app@latest
@@ -40,3 +40,7 @@ npx create-next-app@latest
 npm install express
 ```
 
+## Day 2
+
+- [x] Connect frontend and backend, i.e. frontend can make a request to backend and get a response successfully.
+- [ ] 
