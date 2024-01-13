@@ -41,6 +41,8 @@ app.get("/test", (_req: Request, res: Response) => {
   res.send("Test!");
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Backend server is listening on port ${port}`);
 });
+
+export default server;
