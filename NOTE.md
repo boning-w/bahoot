@@ -1,6 +1,25 @@
-## JavaScript
+## HTML
 
 ## CSS
+
+## JavaScript / TypeScript
+
+## Module Bundler
+
+Q. What is a module Bundler and why we need it?
+
+- [Module Bundlers Explained... Webpack, Rollup, Parcel, and Snowpack](https://www.youtube.com/watch?v=5IG4UmULyoA&ab_channel=Fireship)
+- [Build tools](https://javascript.info/modules-intro#build-tools)
+
+Q. What are the popular module bundlers nowadays?
+
+## Transpiler
+
+Q. What is a transpiler and why we need it?
+
+- [Polyfills and transpilers](https://javascript.info/polyfills)
+
+Q. What are the popular transpilers nowadays?
 
 ## Next.js
 

@@ -17,6 +17,7 @@ A game-based learning platform like kahoot but opensource!
 ## Backend
 
 - Express
+- Swagger
 - Prisma
 
 ## Frontend
@@ -26,6 +27,10 @@ A game-based learning platform like kahoot but opensource!
 ## Sofeware version
 
 - Node: v20.10.0
+
+## Usefull Readings
+
+- [Backend API Server Development with Node.js from Scratch to Production](https://losikov.medium.com/backend-api-server-development-with-node-js-from-scratch-to-production-fe3d3b860003)
 
 ## Day 1
 
