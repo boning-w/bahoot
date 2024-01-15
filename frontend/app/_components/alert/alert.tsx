@@ -55,7 +55,7 @@ const Alert = ({ severity, children }: AlertProps) => {
           bg
         )}
       >
-        <Icon className="size-4" />
+        <Icon className="size-4 flex-shrink-0" />
         <p>{children}</p>
       </div>
     </div>

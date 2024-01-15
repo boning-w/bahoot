@@ -9,7 +9,13 @@ import Alert from "../alert/alert";
 
 const SignUpSchema = z.object({
   email: z.string().email(),
-  password: z.string().min(6).max(20),
+  password: z
+    .string()
+    .trim()
+    .min(6, {
+      message:
+        "At least 6 characters, without any spaces",
+    }),
 });
 
 export type SignUpSchemaType = z.infer<typeof SignUpSchema>;
@@ -37,6 +43,7 @@ export default function FormSignUp() {
       className="w-full sm:max-w-sm flex flex-col px-6 py-12 gap-6"
       onSubmit={handleSubmit(onSubmit)}
     >
+      <h1 className="text-2xl font-mono font-bold mx-auto">Sign Up</h1>
       <div className="flex flex-col gap-2">
         <InputAuth
           type="email"
