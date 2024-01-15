@@ -9,6 +9,7 @@ interface InputAuthProps {
   placeholder?: string;
   required?: boolean;
   error?: FieldError;
+  autoComplete?: string;
 }
 
 /**
@@ -21,7 +22,16 @@ interface InputAuthProps {
  */
 const InputAuth = React.forwardRef<HTMLInputElement, InputAuthProps>(
   (
-    { type, id, label, placeholder, required, error, ...props }: InputAuthProps,
+    {
+      type,
+      id,
+      label,
+      placeholder,
+      required,
+      error,
+      autoComplete,
+      ...props
+    }: InputAuthProps,
     ref
   ) => {
     return (
@@ -41,6 +51,7 @@ const InputAuth = React.forwardRef<HTMLInputElement, InputAuthProps>(
           name={id}
           placeholder={placeholder}
           required={required}
+          autoComplete={autoComplete}
           className={clsx(
             "mt-2 block w-full rounded-md border px-3 py-1.5 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[3px]",
             error

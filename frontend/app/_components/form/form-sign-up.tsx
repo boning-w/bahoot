@@ -9,13 +9,9 @@ import Alert from "../alert/alert";
 
 const SignUpSchema = z.object({
   email: z.string().email(),
-  password: z
-    .string()
-    .trim()
-    .min(6, {
-      message:
-        "At least 6 characters, without any spaces",
-    }),
+  password: z.string().trim().min(6, {
+    message: "At least 6 characters, without any spaces",
+  }),
 });
 
 export type SignUpSchemaType = z.infer<typeof SignUpSchema>;
@@ -40,6 +36,7 @@ export default function FormSignUp() {
 
   return (
     <form
+      autoComplete="on"
       className="w-full sm:max-w-sm flex flex-col px-6 py-12 gap-6"
       onSubmit={handleSubmit(onSubmit)}
     >
@@ -51,6 +48,7 @@ export default function FormSignUp() {
           label="Email"
           placeholder="you@example.com"
           required
+          autoComplete="email"
           {...register("email")}
           error={errors.email}
         />
@@ -60,6 +58,7 @@ export default function FormSignUp() {
           id="password"
           label="Password"
           required
+          autoComplete="current-password"
           {...register("password")}
           error={errors.password}
         />
