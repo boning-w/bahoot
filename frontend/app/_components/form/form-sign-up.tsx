@@ -5,6 +5,7 @@ import InputAuth from "../input/input-auth";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Alert from "../alert/alert";
 
 const SignUpSchema = z.object({
   email: z.string().email(),
@@ -46,7 +47,7 @@ export default function FormSignUp() {
           {...register("email")}
           error={errors.email}
         />
-        {errors.email?.message}
+        {errors.email && <Alert severity="error">{errors.email.message}</Alert>}
         <InputAuth
           type="password"
           id="password"
@@ -55,7 +56,9 @@ export default function FormSignUp() {
           {...register("password")}
           error={errors.password}
         />
-        {errors.password?.message}
+        {errors.password && (
+          <Alert severity="error">{errors.password.message}</Alert>
+        )}
       </div>
       <ButtonAuth label="Sign Up" />
     </form>
