@@ -13,24 +13,15 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SignUp: Story = {
+export const Button: Story = {
   args: {
-    label: "Sign up",
+    label: "Button",
   },
 };
 
-export const Login: Story = {
+export const Hover: Story = {
   args: {
-    label: "Login",
+    label: "Button",
   },
-};
-
-export const Center: Story = {
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: "centered",
-  },
-  args: {
-    label: "Center",
-  },
+  parameters: { pseudo: { hover: true } },
 };

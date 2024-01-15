@@ -33,7 +33,7 @@ export const Error: Story = {
   },
 };
 
-export const InputWithFocus: Story = {
+export const Focus: Story = {
   args: {
     type: "text",
     id: "input",
@@ -42,7 +42,7 @@ export const InputWithFocus: Story = {
   parameters: { pseudo: { focus: true } },
 };
 
-export const ErrorWithFocus: Story = {
+export const FocusError: Story = {
   args: {
     type: "text",
     id: "input",
