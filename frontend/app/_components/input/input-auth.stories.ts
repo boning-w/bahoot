@@ -13,44 +13,44 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Mobile: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: "mobile",
-    },
-  },
+export const Input: Story = {
   args: {
     type: "text",
-    id: "mobile",
-    label: "Mobile",
+    id: "input",
+    label: "Input",
   },
 };
 
-export const Small: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: "sm",
-    },
-  },
+export const Error: Story = {
   args: {
     type: "text",
-    id: "sm",
-    label: "Small",
+    id: "input",
+    label: "Input",
+    error: {
+      message: "error message",
+      type: "error type",
+    },
   },
 };
 
-export const Email: Story = {
+export const InputWithFocus: Story = {
   args: {
-    type: "email",
-    id: "email",
-    label: "Email",
+    type: "text",
+    id: "input",
+    label: "Input",
   },
+  parameters: { pseudo: { focus: true } },
 };
 
-export const Password: Story = {
+export const ErrorWithFocus: Story = {
   args: {
-    type: "password",
-    id: "password",
-    label: "Password",
+    type: "text",
+    id: "input",
+    label: "Input",
+    error: {
+      message: "error message",
+      type: "error type",
+    },
   },
+  parameters: { pseudo: { focus: true } },
 };

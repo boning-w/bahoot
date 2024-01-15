@@ -5,13 +5,14 @@ const config: StorybookConfig = {
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     "../app/**/*.mdx",
-    "../app/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+    "../app/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
+    "storybook-addon-pseudo-states",
   ],
   framework: {
     name: "@storybook/nextjs",
