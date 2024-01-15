@@ -11,7 +11,7 @@ const SignUpSchema = z.object({
   password: z.string().min(6).max(20),
 });
 
-type SignUpSchemaType = z.infer<typeof SignUpSchema>;
+export type SignUpSchemaType = z.infer<typeof SignUpSchema>;
 
 /**
  * Component - Form - Sign Up
@@ -44,6 +44,7 @@ export default function FormSignUp() {
           placeholder="you@example.com"
           required
           {...register("email")}
+          error={errors.email}
         />
         {errors.email?.message}
         <InputAuth
@@ -52,6 +53,7 @@ export default function FormSignUp() {
           label="Password"
           required
           {...register("password")}
+          error={errors.password}
         />
         {errors.password?.message}
       </div>
