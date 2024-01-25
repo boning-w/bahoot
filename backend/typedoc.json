@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["src/"],
+  "entryPointStrategy": "expand",
+  "out": "./docs",
+  "plugin": ["typedoc-theme-hierarchy"],
+  "theme": "hierarchy",
+  "name": "Node TypeScript API",
+  "includeVersion": true,
+  "readme": "none",
+  "exclude": ["src/tests/**/*.ts", "src/**/*.test.ts"]
+}
