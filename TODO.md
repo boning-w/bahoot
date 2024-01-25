@@ -1,0 +1,1 @@
+- Adjust the interaction for a sign-up/login button. When a user hovers over the button, the button's surface brightens. The press and bounce effect is triggered only when the user clicks the button.

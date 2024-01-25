@@ -22,7 +22,16 @@ A game-based learning platform like kahoot but opensource!
 
 ## Frontend
 
-- Nextjs
+- nextjs
+- tailwindcss
+- typescript
+- react-hook-form
+- zod
+- hookform/resolvers
+- clsx
+- storybook
+- vitest
+- cypress
 
 ## Sofeware version
 
@@ -36,18 +45,19 @@ A game-based learning platform like kahoot but opensource!
 
 1. Install Next.js
 2. Install Express
-
-```bash
-npx create-next-app@latest
-```
-
-```bash
-npm install express
-```
-
 3. Connect frontend and backend, i.e. frontend can make a request to backend and get a response successfully.
-
 4. Write a frontend unit test to test the `apiTest` api call.
-5. Write a e2e test to test the route `/test`
-6. 
+5. Write a e2e test to test the route `/test`.
+6. Write a swagger document for backend.
+7. Write a backend integration test to test route `/test`.
+
+## Day 2
+
+1. Front: write an email input component.
+2. Front: wrtie a storybook for the email input component.
+3. Front: write a cypress test for the email component.
+4. Front: write the password input, confirm-password input, sign-up button components following the same steps of the email component.
+5. Front: integrate the email, password, comfirm-password and sign-up button components into a sign-up form component, it also need a storybook and a cy test
+6. Front: write a fake sign-up api for the form, finish the sign-up submission business logic. Also with a unit test and e2e test.
+7. 
 
