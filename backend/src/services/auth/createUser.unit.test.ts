@@ -1,10 +1,12 @@
 import prismaMock from "@/lib/__mocks__/prisma";
+import hashPassword from "@/lib/password/hashPassword";
 import { FormSignUpSchema } from "@/models/auth.model";
 import createUser from "@/services/auth/createUser";
 import { User } from "@prisma/client";
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("@/lib/prisma");
+vi.mock("@/lib/password/hashPassword");
 
 describe("createUser", () => {
   it("should create a new user successfully", async () => {
@@ -23,6 +25,7 @@ describe("createUser", () => {
     prismaMock.user.create.mockResolvedValue(userMock);
     const createdUser = await createUser(formSignUp);
     expect(createdUser).toEqual(userMock);
+    expect(hashPassword).toBeCalledTimes(1);
   });
 
   it("should handle error - Unique constraint failed on the fields: (`email`)", async () => {

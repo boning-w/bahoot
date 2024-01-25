@@ -26,10 +26,7 @@ export default async function signup(
     );
   }
 
-  // Create a new user with the provided email
   const newUser = await createUser(formSignUp);
-
-  // Create a new token for the new user
   const token = createTokenByUser(newUser);
 
   // Send success response

@@ -1,3 +1,4 @@
+import hashPassword from "@/lib/password/hashPassword";
 import prisma from "@/lib/prisma";
 import { Prisma, User } from "@prisma/client";
 
@@ -10,7 +11,7 @@ import { Prisma, User } from "@prisma/client";
 export default async function createUser(
   user: Prisma.UserCreateInput
 ): Promise<User> {
-  // Use Prisma's user.create method to create a new user in the database
+  user.password = await hashPassword(user.password);
   const createdUser = await prisma.user.create({ data: user });
 
   return createdUser;
