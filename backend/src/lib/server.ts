@@ -18,7 +18,7 @@ const options = {
       description: "Server that powers the Bahoot frontend",
     },
   },
-  apis: ["./src/*.ts"], // files containing annotations as above
+  apis: ["./src/**/*.ts"], // files containing annotations as above
 };
 
 const swaggerSpec = swaggerJSDoc(options);

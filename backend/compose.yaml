@@ -1,0 +1,11 @@
+services:
+  bahoot-db:
+    image: postgres:14.10
+    restart: always
+    # volumes:
+    #   - bahoot-db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432

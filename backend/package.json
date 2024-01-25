@@ -4,10 +4,11 @@
   "description": "bahoot backend",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "test": "vitest",
-    "test:ui": "vitest --ui --coverage.enabled=true",
-    "test:coverage": "vitest run --coverage"
+    "dev": "tsx watch src/index.ts",
+    "test:unit": "vitest --config ./vitest.config.unit.ts",
+    "test:unit:ui": "vitest --config ./vitest.config.unit.ts --ui --coverage.enabled=true",
+    "test:integration": "./scripts/run-integration.sh",
+    "test:integration:ui": "./scripts/run-integration.sh --ui"
   },
   "repository": {
     "type": "git",

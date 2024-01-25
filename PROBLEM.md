@@ -143,8 +143,11 @@ If you aim to enhance the security of your JWT and prevent sensitive information
 
 These approaches add an extra layer of security, safeguarding sensitive details within the token. Choose the method that aligns with your security requirements and implementation preferences.
 
+### Vitest
 
+Q. Integration test: If you are on a Mac, you will also need to run the following command to install and alias a command that is used within the `wait-for-it.sh` script:
 
-
-
+```bash
+brew install coreutils && alias timeout=gtimeout
+```
 
