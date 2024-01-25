@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import request from "supertest";
-import app from "@/lib/server";
+import app from "@/configs/app.config";
 import prisma from "@/lib/prisma";
 import jwt from "jsonwebtoken";
 import { FormSignUpSchema } from "@/models/auth.model";

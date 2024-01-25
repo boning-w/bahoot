@@ -4,7 +4,7 @@
   "description": "bahoot backend",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsx watch src/app.ts",
     "test:unit": "vitest --config ./vitest.config.unit.ts",
     "test:unit:ui": "vitest --config ./vitest.config.unit.ts --ui --coverage.enabled=true",
     "test:integration": "./scripts/run-integration.sh",
