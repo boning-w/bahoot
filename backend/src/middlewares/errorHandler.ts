@@ -21,9 +21,6 @@ export default function errorHandler(
   // Send a JSON response with the appropriate status code and error message
   response.status(status).json({
     // Use the error message from AppError if available, otherwise provide a generic message
-    message:
-      error instanceof AppError
-        ? error.message
-        : "Oops! Something went wrong...",
+    message: error instanceof AppError ? error.message : error,
   });
 }
