@@ -31,7 +31,7 @@ describe("errorHandler", () => {
     // Ensure the response status and JSON methods are called correctly
     expect(responseMock.status).toHaveBeenCalledWith(500);
     expect(responseMock.json).toHaveBeenCalledWith({
-      message: "Oops! Something went wrong...",
+      message: error,
     });
   });
 });
