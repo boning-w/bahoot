@@ -5,9 +5,9 @@ import prisma from "@/lib/prisma";
 import jwt from "jsonwebtoken";
 import { FormSignUpSchema } from "@/models/auth.model";
 import getJWTSecret from "@/lib/token/getJWTSecret";
-import { API_AUTH_SIGNUP } from "@/constants";
+import { API_POST_AUTH_SIGNUP } from "@/constants";
 
-describe(`[POST] ${API_AUTH_SIGNUP}`, () => {
+describe(`[POST] ${API_POST_AUTH_SIGNUP}`, () => {
   const newUser: FormSignUpSchema = {
     email: "test@test.com",
     name: "test",
@@ -16,7 +16,7 @@ describe(`[POST] ${API_AUTH_SIGNUP}`, () => {
 
   it("should respond with a `201` status code, a successful message and a token", async () => {
     const { body, status } = await request(app)
-      .post(API_AUTH_SIGNUP)
+      .post(API_POST_AUTH_SIGNUP)
       .send(newUser);
 
     const user = await prisma.user.findFirst();
@@ -28,7 +28,9 @@ describe(`[POST] ${API_AUTH_SIGNUP}`, () => {
   });
 
   it("should respond with a valid session token when successful", async () => {
-    const { body } = await request(app).post(API_AUTH_SIGNUP).send(newUser);
+    const { body } = await request(app)
+      .post(API_POST_AUTH_SIGNUP)
+      .send(newUser);
     expect(body).toHaveProperty("token");
     expect(jwt.verify(body.token, getJWTSecret()));
   });
@@ -39,7 +41,7 @@ describe(`[POST] ${API_AUTH_SIGNUP}`, () => {
     });
 
     const { status, body } = await request(app)
-      .post(API_AUTH_SIGNUP)
+      .post(API_POST_AUTH_SIGNUP)
       .send(newUser);
 
     const count = await prisma.user.count();
@@ -50,15 +52,17 @@ describe(`[POST] ${API_AUTH_SIGNUP}`, () => {
   });
 
   it("should respond with a `400` status code if an invalid request body is provided", async () => {
-    const { body, status } = await request(app).post(API_AUTH_SIGNUP).send({
-      email: "", // error email format
-      name: "", // error user name format
-      // missing password
-    });
+    const { body, status } = await request(app)
+      .post(API_POST_AUTH_SIGNUP)
+      .send({
+        email: "", // error email format
+        name: "", // error user name format
+        // missing password
+      });
 
     expect(status).toBe(400);
     expect(body.message).toBe(
-      "Invalid or missing inputs provided for: email, name, password"
+      "Invalid or missing inputs provided for: email, name, password",
     );
   });
 });

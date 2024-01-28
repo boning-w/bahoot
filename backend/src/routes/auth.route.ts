@@ -1,4 +1,4 @@
-import { API_AUTH_SIGNUP } from "@/constants";
+import { API_POST_AUTH_SIGNUP } from "@/constants";
 import signup from "@/controllers/auth/signup";
 import validate from "@/middlewares/validate";
 import { FormSignUpSchema } from "@/models/auth.model";
@@ -70,6 +70,6 @@ const router = Router();
  *                 error: Internal Server Error. Something went wrong on the server.
  */
 // Endpoint to register a new user
-router.post(API_AUTH_SIGNUP, validate(FormSignUpSchema), signup);
+router.post(API_POST_AUTH_SIGNUP, validate(FormSignUpSchema), signup);
 
 export default router;

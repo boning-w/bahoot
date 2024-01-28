@@ -1,4 +1,4 @@
-import { API_TEST } from "@/constants";
+import { API_GET_TEST } from "@/constants";
 import { Request, Response, Router } from "express";
 
 const router = Router();
@@ -19,7 +19,7 @@ const router = Router();
  *           text/plain:
  *             example: Test!
  */
-router.get(API_TEST, (_req: Request, res: Response) => {
+router.get(API_GET_TEST, (_req: Request, res: Response) => {
   res.send("Test!");
 });
 
