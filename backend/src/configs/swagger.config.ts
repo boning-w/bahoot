@@ -1,16 +1,38 @@
-import swaggerJSDoc from "swagger-jsdoc";
+import { API_DOCS } from "@/constants";
 
-const options = {
-  failOnErrors: true, // Whether or not to throw when parsing errors. Defaults to false.
-  definition: {
-    openapi: "3.1.0",
-    info: {
-      version: "0.0.0",
-      title: "Bahoot CRUD Server",
-      description: "Server that powers the Bahoot frontend",
+const SWAGGER_CONFIG = {
+  info: {
+    version: "1.0.0",
+    title: "Bahoot CRUD API Docs",
+    license: {
+      name: "MIT",
     },
   },
-  apis: ["./src/**/*.ts"], // files containing annotations as above
+  security: {
+    BasicAuth: {
+      type: "http",
+      scheme: "basic",
+    },
+  },
+  baseDir: __dirname,
+  // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
+  filesPattern: ["../**/*.ts", "../**/*.js"],
+  // URL where SwaggerUI will be rendered
+  swaggerUIPath: API_DOCS,
+  // Expose OpenAPI UI
+  exposeSwaggerUI: true,
+  // Expose Open API JSON Docs documentation in `apiDocsPath` path.
+  exposeApiDocs: false,
+  // Open API JSON Docs endpoint.
+  apiDocsPath: "/v3/api-docs",
+  // Set non-required fields as nullable by default
+  notRequiredAsNullable: false,
+  // You can customize your UI options.
+  // you can extend swagger-ui-express config. You can checkout an example of this
+  // in the `example/configuration/swaggerOptions.js`
+  swaggerUiOptions: {},
+  // multiple option in case you want more that one instance
+  multiple: true,
 };
 
-export const SWAGGER_CONFIG = swaggerJSDoc(options);
+export default SWAGGER_CONFIG;

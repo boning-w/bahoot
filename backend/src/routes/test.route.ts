@@ -4,20 +4,10 @@ import { Request, Response, Router } from "express";
 const router = Router();
 
 /**
- * @swagger
- * tags:
- *   name: Test
- *   description: Only for testing backend is running
- * /test:
- *   get:
- *     summary: Test if backend is running
- *     tags: [Test]
- *     responses:
- *       200:
- *         description: Successful response with plain text content "Test!"
- *         content:
- *           text/plain:
- *             example: Test!
+ * GET /api/test
+ * @tags TEST
+ * @summary Only for testing backend is running
+ * @return 200 - success response - text/plain
  */
 router.get(API_GET_TEST, (_req: Request, res: Response) => {
   res.send("Test!");
